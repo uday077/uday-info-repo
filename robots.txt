@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://udaypatil.dev/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1
+
+# Allow all search engines to index the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
