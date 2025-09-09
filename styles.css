@@ -309,8 +309,10 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: flex-start;
-    min-height: 80vh;
+    align-items: center;
+    min-height: 85vh;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .hero-text {
@@ -529,14 +531,21 @@ body {
 
 .profile-card {
     background: var(--card-bg);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(25px);
     border-radius: 24px;
-    padding: 2rem;
+    padding: 2.5rem;
     text-align: center;
     border: 1px solid var(--card-border);
-    box-shadow: var(--shadow);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
     position: relative;
     overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 35px 100px rgba(0, 0, 0, 0.2);
 }
 
 .card-glow {
@@ -580,6 +589,14 @@ body {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.2);
 }
 
 .status-indicator {
@@ -1908,7 +1925,21 @@ section {
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 2rem;
+        gap: 3rem;
+        min-height: 90vh;
+        padding: 2rem 0;
+    }
+
+    .profile-card {
+        padding: 2rem;
+        margin: 0 auto;
+        max-width: 350px;
+    }
+
+    .avatar-bg {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 1rem;
     }
 
     .hero-title {
@@ -2130,6 +2161,48 @@ section {
 
     .logo-text {
         font-size: 0.75rem;
+    }
+
+    .profile-card {
+        padding: 1.5rem;
+        max-width: 300px;
+    }
+
+    .avatar-bg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .hero-content {
+        gap: 2rem;
+        min-height: 85vh;
+    }
+}
+
+/* Enhanced Laptop View */
+@media (min-width: 1024px) {
+    .hero-content {
+        gap: 5rem;
+        min-height: 90vh;
+    }
+
+    .profile-card {
+        padding: 3rem;
+        max-width: 400px;
+    }
+
+    .avatar-bg {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.8rem;
     }
 }
 

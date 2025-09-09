@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build: .
+    container_name: uday-patil-portfolio
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio.rule=Host(`localhost`)"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - portfolio-network
+
+networks:
+  portfolio-network:
+    driver: bridge
