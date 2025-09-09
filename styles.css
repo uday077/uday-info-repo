@@ -1777,6 +1777,30 @@ section {
     transition: color 0.3s ease;
 }
 
+/* Resume Download Styling */
+.resume-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: white !important;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+}
+
+.resume-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+    color: white !important;
+}
+
+.resume-download i {
+    font-size: 0.9rem;
+}
+
 .method-content a:hover {
     color: #8b5cf6;
 }
