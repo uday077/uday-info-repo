@@ -86,7 +86,7 @@ docker-compose down
 
 ```bash
 # Clone the repository
-git clone https://github.com/udaypatil/uday-info-repo.git
+git clone https://github.com/uday077/uday-info-repo.git
 cd uday-info-repo
 
 # Start local development server
@@ -162,6 +162,16 @@ Add your projects in the Projects section with:
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+## 🔗 Related Projects
+
+Check out my other DevOps and AWS projects:
+
+- **[Node.js Project on AWS EC2](https://github.com/uday077/nodejs-project-on-aws-ec2-)** - CI/CD pipeline with CodePipeline
+- **[Lovely Backend Project](https://github.com/uday077/lovely-backend-project-)** - TypeScript backend development
+- **[AWS Static Website Hosting](https://github.com/uday077/AWS---Static-website-hosting-using-AWS-S3-and-service-)** - S3 and CloudFront setup
+
+Visit my [GitHub Profile](https://github.com/uday077) for more projects!
 
 ## 📄 License
 
