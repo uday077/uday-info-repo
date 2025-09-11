@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://udaypatil.dev/sitemap.xml
+Sitemap: https://udaypatil.netlify.app/sitemap.xml
 
 # Crawl-delay for better server performance
 Crawl-delay: 1
