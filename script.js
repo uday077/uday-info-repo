@@ -63,7 +63,7 @@ function typeWriter(element, text, speed = 100) {
 document.addEventListener('DOMContentLoaded', () => {
     const typingElement = document.querySelector('.typing-text');
     if (typingElement) {
-        const texts = ['DevOps Engineer', 'Cloud Infrastructure Specialist', 'CI/CD Automation Expert', 'AWS Solutions Architect'];
+        const texts = ['DevOps Engineer', 'Cloud Infrastructure Specialist', 'CI/CD Automation Expert'];
         let currentIndex = 0;
         
         function typeNext() {
