@@ -6,13 +6,30 @@ if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
     });
 
     // Close mobile menu when clicking on a link
     document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        document.body.style.overflow = '';
     }));
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
 }
 
 // Smooth scrolling for navigation links
@@ -357,6 +374,38 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
+// Touch and mobile optimizations
+document.addEventListener('DOMContentLoaded', () => {
+    // Add touch class for touch devices
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        document.body.classList.add('touch-device');
+    }
+    
+    // Improve touch interactions
+    const touchElements = document.querySelectorAll('.btn, .profile-link, .project-link, .nav-link');
+    touchElements.forEach(element => {
+        element.addEventListener('touchstart', function() {
+            this.classList.add('touch-active');
+        });
+        
+        element.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.classList.remove('touch-active');
+            }, 150);
+        });
+    });
+    
+    // Prevent zoom on double tap for buttons
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+        const now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false);
+});
+
 // Add CSS for loading animation and notifications
 const additionalStyles = document.createElement('style');
 additionalStyles.textContent = `
@@ -426,6 +475,43 @@ additionalStyles.textContent = `
     
     ::-webkit-scrollbar-thumb:hover {
         background: linear-gradient(135deg, #2563eb, #7c3aed);
+    }
+    
+    /* Touch device optimizations */
+    .touch-device .btn,
+    .touch-device .profile-link,
+    .touch-device .project-link {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    .touch-active {
+        transform: scale(0.95) !important;
+        transition: transform 0.1s ease !important;
+    }
+    
+    /* Better focus states for accessibility */
+    .btn:focus,
+    .profile-link:focus,
+    .project-link:focus,
+    .nav-link:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+    }
+    
+    /* Smooth transitions for all interactive elements */
+    .btn,
+    .profile-link,
+    .project-link,
+    .nav-link,
+    .skill-item,
+    .tech-tag {
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 `;
 document.head.appendChild(additionalStyles);

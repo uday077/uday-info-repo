@@ -1922,6 +1922,57 @@ section {
 }
 
 /* Responsive Design */
+
+/* Tablet and Medium Screens */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .hero-content {
+        gap: 3rem;
+        min-height: 85vh;
+    }
+    
+    .profile-card {
+        padding: 2.5rem;
+        max-width: 380px;
+    }
+    
+    .avatar-bg {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hero-title {
+        font-size: 3.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.6rem;
+    }
+    
+    .tech-logos-bar .section-title {
+        font-size: 3rem;
+    }
+    
+    .about-content {
+        gap: 3rem;
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile and Small Screens */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -1936,10 +1987,11 @@ section {
         backdrop-filter: blur(20px);
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
         padding: 2rem 0;
         border-top: 1px solid rgba(59, 130, 246, 0.1);
+        z-index: 999;
     }
 
     .nav-menu.active {
@@ -1949,9 +2001,10 @@ section {
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 3rem;
+        gap: 2.5rem;
         min-height: 90vh;
-        padding: 2rem 0;
+        padding: 1.5rem 0;
+        align-items: center;
     }
 
     .profile-card {
@@ -2106,6 +2159,41 @@ section {
     .profile-info p {
         font-size: 1rem;
     }
+    
+    /* Better touch targets for mobile */
+    .btn {
+        min-height: 48px;
+        padding: 12px 24px;
+    }
+    
+    .nav-link {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+    }
+    
+    .profile-link {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .project-link {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Improve scrolling on mobile */
+    .hero {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Better spacing for mobile */
+    section {
+        padding: 4rem 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2200,6 +2288,47 @@ section {
     .hero-content {
         gap: 2rem;
         min-height: 85vh;
+        padding: 1rem 0;
+    }
+    
+    /* Extra small mobile improvements */
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .hero-highlights .highlight-item {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+    
+    .hero-tags {
+        gap: 0.5rem;
+    }
+    
+    .tag {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    /* Better form inputs for mobile */
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 1.2rem;
+    }
+    
+    /* Improve project cards on small screens */
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .project-title {
+        font-size: 1.1rem;
+    }
+    
+    .project-description {
+        font-size: 0.9rem;
     }
 }
 
@@ -2208,6 +2337,7 @@ section {
     .hero-content {
         gap: 5rem;
         min-height: 90vh;
+        align-items: center;
     }
 
     .profile-card {
@@ -2227,6 +2357,92 @@ section {
 
     .hero-subtitle {
         font-size: 1.8rem;
+    }
+    
+    /* Enhanced desktop interactions */
+    .btn:hover {
+        transform: translateY(-3px);
+    }
+    
+    .profile-card:hover {
+        transform: translateY(-10px) scale(1.02);
+    }
+    
+    .project-card:hover {
+        transform: translateY(-15px) scale(1.03);
+    }
+    
+    .skill-category:hover {
+        transform: translateY(-8px) scale(1.02);
+    }
+    
+    /* Better spacing for desktop */
+    .container {
+        padding: 0 30px;
+    }
+    
+    section {
+        padding: 7rem 0;
+    }
+    
+    .section-header {
+        margin-bottom: 5rem;
+    }
+    
+    /* Enhanced grid layouts for desktop */
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Large Desktop View */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 40px;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 3.5rem;
+    }
+    
+    .profile-card {
+        max-width: 450px;
+        padding: 3.5rem;
+    }
+    
+    .avatar-bg {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
     }
 }
 
