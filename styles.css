@@ -1804,21 +1804,46 @@ section {
 .cert-list {
     list-style: none;
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
 }
 
 .cert-list li {
     display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    margin-bottom: 1.5rem;
+    align-items: flex-start;
+    gap: 1rem;
     color: var(--text-secondary);
-    font-weight: 600;
-    font-size: 1.05rem;
 }
 
 .cert-list li i {
     color: #22c55e;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.cert-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.cert-name {
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 1.02rem;
+}
+
+.cert-issuer {
+    font-size: 0.88rem;
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.cert-skills {
+    font-size: 0.8rem;
+    color: var(--text-muted);
 }
 
 .contact {
