@@ -1003,8 +1003,12 @@
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
+                <div class="cyber-status-pill" style="margin: 0 auto 1.2rem auto;">
+                    <span class="status-pulse-dot"></span>
+                    <span class="status-pill-text">CAREER TRACK &bull; PRODUCTION PROVEN</span>
+                </div>
                 <h2 class="section-title">Uday Patil's Professional Experience</h2>
-                <p class="section-subtitle">A timeline of my career growth and achievements</p>
+                <p class="section-subtitle">Real-world production systems, multi-cloud migrations, and automated operations</p>
             </div>
             
             <div class="experience-timeline">
@@ -1014,63 +1018,154 @@
                         <div class="marker-line"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="job-info">
-                                <h3 class="job-title">DevOps Engineer</h3>
-                                <span class="company">Crypto 306</span>
+                        <!-- Experience Main Header -->
+                        <div class="exp-main-header">
+                            <div class="exp-company-badge">
+                                <div class="company-logo-box">
+                                    <i class="fas fa-cube"></i>
+                                </div>
+                                <div class="exp-role-info">
+                                    <h3 class="job-title">DevOps Engineer</h3>
+                                    <div class="company-meta">
+                                        <span class="company-name"><i class="fas fa-building"></i> Crypto 306</span>
+                                        <span class="company-dot">&bull;</span>
+                                        <span class="company-type">Full-Time</span>
+                                        <span class="company-dot">&bull;</span>
+                                        <span class="company-loc"><i class="fas fa-map-marker-alt"></i> India</span>
+                                    </div>
+                                </div>
                             </div>
-                            <span class="duration">04 June, 2024 - Present</span>
+                            <div class="exp-status-wrapper">
+                                <span class="duration-badge"><i class="far fa-calendar-alt"></i> 04 June, 2024 - Present</span>
+                                <span class="active-badge"><span class="active-pulse"></span> Active Role</span>
+                            </div>
+                        </div>
+
+                        <!-- Role Summary Box -->
+                        <div class="exp-summary-box">
+                            <p>
+                                Leading the architectural transformation and continuous delivery of scalable multi-cloud systems across AWS and GCP. Driving declarative GitOps automation, container orchestration, microservices hardening, and production AI platforms.
+                            </p>
                         </div>
                         
-                        <div class="project">
-                            <h4 class="project-title">
-                                <i class="fas fa-newspaper"></i>
-                                Project 1 – News Articles Website Hosting
-                            </h4>
-                            <ul class="project-achievements">
-                                <li>Designed and automated CI/CD pipeline with GitHub Actions for deploying high-traffic news platform <a href="https://cyberupdates365.com" target="_blank" rel="noopener" style="color: #3b82f6; font-weight: 600; text-decoration: underline;">CyberUpdates365.com</a> on AWS EC2.</li>
-                                <li>Integrated GitHub with automated build-test-deploy workflows, reducing manual release efforts by 80%.</li>
-                                <li>Configured GitHub Secrets and IAM roles for secure deployments, ensuring compliance and access control.</li>
-                                <li>Applied advanced SEO optimization techniques and integrated Cloudflare for domain management, performance caching, and WAF security on <a href="https://cyberupdates365.com" target="_blank" rel="noopener" style="color: #3b82f6; font-weight: 600; text-decoration: underline;">cyberupdates365.com</a>.</li>
-                            </ul>
+                        <!-- 4 Production Projects Engineering Grid -->
+                        <div class="exp-projects-grid">
+                            
+                            <!-- Project 1 -->
+                            <div class="exp-project-card">
+                                <div class="exp-project-header">
+                                    <div class="exp-proj-title-group">
+                                        <div class="exp-proj-icon" style="background: rgba(59, 130, 246, 0.12); color: #3b82f6;">
+                                            <i class="fas fa-newspaper"></i>
+                                        </div>
+                                        <div>
+                                            <span class="exp-proj-num">PROJECT 01</span>
+                                            <h4 class="exp-project-title">News Articles Website Hosting</h4>
+                                        </div>
+                                    </div>
+                                    <span class="exp-status-chip chip-cyan"><i class="fas fa-shield-alt"></i> Production Live</span>
+                                </div>
+                                <ul class="exp-achievements">
+                                    <li>Architected automated CI/CD pipeline using GitHub Actions for deploying high-traffic news platform <a href="https://cyberupdates365.com" target="_blank" rel="noopener" class="exp-link">CyberUpdates365.com</a> on AWS EC2.</li>
+                                    <li>Integrated automated build-test-deploy workflows, cutting manual release intervention by <strong>80%</strong>.</li>
+                                    <li>Configured GitHub Secrets and IAM least-privilege roles ensuring zero token exposure and strict security compliance.</li>
+                                    <li>Deployed Cloudflare DNS, SSL offloading, edge performance caching, and WAF protection for <a href="https://cyberupdates365.com" target="_blank" rel="noopener" class="exp-link">cyberupdates365.com</a>.</li>
+                                </ul>
+                                <div class="exp-tech-tags">
+                                    <span class="exp-tag">AWS EC2</span>
+                                    <span class="exp-tag">Cloudflare WAF</span>
+                                    <span class="exp-tag">GitHub Actions</span>
+                                    <span class="exp-tag">SSL / TLS</span>
+                                    <span class="exp-tag">SEO Architecture</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Project 2 -->
+                            <div class="exp-project-card">
+                                <div class="exp-project-header">
+                                    <div class="exp-proj-title-group">
+                                        <div class="exp-proj-icon" style="background: rgba(245, 158, 11, 0.12); color: #f59e0b;">
+                                            <i class="fas fa-database"></i>
+                                        </div>
+                                        <div>
+                                            <span class="exp-proj-num">PROJECT 02</span>
+                                            <h4 class="exp-project-title">AWS Enterprise Data Governance Tool</h4>
+                                        </div>
+                                    </div>
+                                    <span class="exp-status-chip chip-amber"><i class="fas fa-bolt"></i> CI/CD Pipeline</span>
+                                </div>
+                                <ul class="exp-achievements">
+                                    <li>Implemented end-to-end automated pipelines with GitHub, AWS CodeBuild, CodePipeline, and EC2 for rapid software delivery across staging and production.</li>
+                                    <li>Engineered custom Dockerfiles, managed container images via Amazon ECR with immutable version tagging, and orchestrated multi-service containers with Docker Compose.</li>
+                                    <li>Configured isolated container networks and environment variables for secure database governance.</li>
+                                </ul>
+                                <div class="exp-tech-tags">
+                                    <span class="exp-tag">AWS CodePipeline</span>
+                                    <span class="exp-tag">AWS CodeBuild</span>
+                                    <span class="exp-tag">Amazon ECR</span>
+                                    <span class="exp-tag">Docker Compose</span>
+                                    <span class="exp-tag">EC2</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Project 3 -->
+                            <div class="exp-project-card">
+                                <div class="exp-project-header">
+                                    <div class="exp-proj-title-group">
+                                        <div class="exp-proj-icon" style="background: rgba(16, 185, 129, 0.12); color: #10b981;">
+                                            <i class="fas fa-cubes"></i>
+                                        </div>
+                                        <div>
+                                            <span class="exp-proj-num">PROJECT 03</span>
+                                            <h4 class="exp-project-title">GCP Microservices SocialApplication</h4>
+                                        </div>
+                                    </div>
+                                    <span class="exp-status-chip chip-emerald"><i class="fas fa-sync-alt"></i> GKE GitOps</span>
+                                </div>
+                                <ul class="exp-achievements">
+                                    <li>Configured automated build and GitOps deployment for a Java microservices application using GitHub Actions and ArgoCD.</li>
+                                    <li>Deployed applications on Google Kubernetes Engine (GKE) across Dev, Stage, and Prod clusters with NGINX Ingress Controller and Helm charts.</li>
+                                    <li>Provisioned IAM service accounts, Google Cloud Storage buckets, and Cloud SQL relational database instances.</li>
+                                </ul>
+                                <div class="exp-tech-tags">
+                                    <span class="exp-tag">Google GKE</span>
+                                    <span class="exp-tag">ArgoCD</span>
+                                    <span class="exp-tag">Helm Charts</span>
+                                    <span class="exp-tag">Kubernetes Ingress</span>
+                                    <span class="exp-tag">Cloud SQL</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Project 4 -->
+                            <div class="exp-project-card">
+                                <div class="exp-project-header">
+                                    <div class="exp-proj-title-group">
+                                        <div class="exp-proj-icon" style="background: rgba(139, 92, 246, 0.12); color: #8b5cf6;">
+                                            <i class="fas fa-robot"></i>
+                                        </div>
+                                        <div>
+                                            <span class="exp-proj-num">PROJECT 04</span>
+                                            <h4 class="exp-project-title">Agentic AI Operations Platform</h4>
+                                        </div>
+                                    </div>
+                                    <span class="exp-status-chip chip-purple"><i class="fas fa-brain"></i> Agentic AI Ops</span>
+                                </div>
+                                <ul class="exp-achievements">
+                                    <li>Architected containerized multi-stage Docker builds for a high-performance FastAPI backend and SvelteKit frontend proxied by Nginx.</li>
+                                    <li>Orchestrated multi-container workloads with Docker Compose, automated Amazon ECR image push pipelines, health monitoring, and persistent SQLite database state.</li>
+                                    <li>Engineered production deployment for multi-model LLM routing (OpenAI, Anthropic, Azure) with Slack, Microsoft Teams, and webhook integrations.</li>
+                                    <li>Configured autonomous agent tools, subagent workflows, and MCP server connectors for automated incident response.</li>
+                                </ul>
+                                <div class="exp-tech-tags">
+                                    <span class="exp-tag">Agentic AI</span>
+                                    <span class="exp-tag">FastAPI</span>
+                                    <span class="exp-tag">Multi-Stage Docker</span>
+                                    <span class="exp-tag">MCP Servers</span>
+                                    <span class="exp-tag">LLM Routing</span>
+                                </div>
+                            </div>
+
                         </div>
-                        
-                        <div class="project">
-                            <h4 class="project-title">
-                                <i class="fas fa-database"></i>
-                                Project 2 - AWS - Data Governance tool
-                            </h4>
-                            <ul class="project-achievements">
-                                <li>CI/CD implementation using GitHub, AWS CodeBuild, CodePipeline, and EC2 for efficient software delivery and streamlined development workflows across multiple environments.</li>
-                                <li>Worked with Docker including Dockerfile, used ECR to store docker images with tag and Docker-Compose to create Containers with their environment variables and in same network.</li>
-                                <li>Deployed respected docker images on EC2 on multiple ENVs.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project">
-                            <h4 class="project-title">
-                                <i class="fas fa-users"></i>
-                                Project 3 - GCP - SocialApplication
-                            </h4>
-                            <ul class="project-achievements">
-                                <li>Worked on Java based social media app which get build and deployed using GitHub Actions including ArgoCD. Here we have used Microservices architecture including multiple API calls and connectivity.</li>
-                                <li>Deployed applications on GKE(Kubernetes) across Dev, Stage, and Prod clusters, managing services, deployments, and Ingress controller (using Helm charts). Set IAM roles, used Cloud storage and Cloud sql instances.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project">
-                            <h4 class="project-title">
-                                <i class="fas fa-robot"></i>
-                                Project 4 - AWS - Agentic AI Operations Platform
-                            </h4>
-                            <ul class="project-achievements">
-                                <li>Built and deployed the containerized infrastructure for Agentic AI Operations Platform which includes multi-stage Docker builds for a FastAPI backend and SvelteKit frontend served via Nginx.</li>
-                                <li>Orchestrated multi-container deployment with Docker Compose, configured ECR image pipelines, health checks, container execution, and persistent SQLite DB for state management.</li>
-                                <li>Delivered production-ready deployment for an AI platform supporting multi-model LLM routing (OpenAI, Anthropic, Azure), Slack/Teams, multiple clouds, and webhooks.</li>
-                                <li>Prepared skill sets for each agents, create connections/integration between Agentic AI Platform and other outside tools.</li>
-                            </ul>
-                        </div>
-                        
                     </div>
                 </div>
             </div>
