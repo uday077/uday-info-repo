@@ -121,17 +121,17 @@ body {
     transform: scale(1.05);
 }
 
-.theme-toggle-container {
+.nav-actions {
     display: flex;
-    justify-content: center;
-    margin: 3rem 0 4rem 0;
+    align-items: center;
+    margin-left: 1.5rem;
 }
 
 .theme-btn {
-    width: 70px;
-    height: 70px;
+    width: 42px;
+    height: 42px;
     background: var(--card-bg);
-    border: 2px solid var(--card-border);
+    border: 1px solid var(--card-border);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -140,45 +140,20 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(15px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-}
-
-.theme-btn::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
-    border-radius: 50%;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.theme-btn:hover::before {
-    opacity: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .theme-btn:hover {
     background: var(--accent-primary);
     color: white;
-    transform: translateY(-5px) scale(1.15);
-    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+    transform: rotate(20deg) scale(1.08);
     border-color: transparent;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);
 }
 
 .theme-btn i {
-    font-size: 1.8rem;
+    font-size: 1.15rem;
     transition: transform 0.3s ease;
-    z-index: 1;
-}
-
-.theme-btn:hover i {
-    transform: rotate(180deg) scale(1.1);
 }
 
 .nav-menu {
@@ -2423,17 +2398,18 @@ section {
         font-size: 2.5rem;
     }
     
-    .theme-toggle-container {
-        margin: 2rem 0 3rem 0;
+    .nav-actions {
+        margin-left: auto;
+        margin-right: 1rem;
     }
     
     .theme-btn {
-        width: 60px;
-        height: 60px;
+        width: 38px;
+        height: 38px;
     }
     
     .theme-btn i {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     
     .profile-info h3 {
@@ -2841,6 +2817,7 @@ section {
     transition: width 0.3s, height 0.3s, background-color 0.3s, opacity 0.3s;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
+    opacity: 0;
 }
 
 .custom-cursor-dot {
@@ -2854,6 +2831,8 @@ section {
     pointer-events: none;
     z-index: 10000;
     transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .cursor-hover {
