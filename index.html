@@ -28,7 +28,7 @@
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -236,6 +236,10 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
+                    <div class="cyber-status-pill">
+                        <span class="status-pulse-dot"></span>
+                        <span class="status-pill-text">SYS_STATUS: OPTIMAL | DEVSECOPS &amp; CLOUD ARCHITECTURE</span>
+                    </div>
                     <div class="greeting">
                         <span class="wave">👋</span>
                         <span>Hello, I'm</span>
@@ -244,35 +248,35 @@
                         <span class="name-highlight gradient-text">Uday Patil</span>
                     </h1>
                     <h2 class="hero-subtitle">
-                        <span class="typing-text">DevOps Engineer</span>
-                        <span class="cursor">|</span>
+                        <span class="terminal-prefix">&gt; </span><span class="typing-text">DevOps &amp; DevSecOps Engineer</span>
+                        <span class="cursor">_</span>
                     </h2>
                     <div class="hero-tags">
-                        <span class="tag">CI/CD Expert</span>
-                        <span class="tag">Cloud Infrastructure</span>
-                        <span class="tag">Freelance Available</span>
+                        <span class="tag"><i class="fas fa-shield-alt"></i> DevSecOps</span>
+                        <span class="tag"><i class="fab fa-aws"></i> AWS &amp; GCP</span>
+                        <span class="tag"><i class="fas fa-cubes"></i> K8s &amp; GitOps</span>
+                        <span class="tag"><i class="fas fa-robot"></i> Agentic AI Ops</span>
                     </div>
                     <p class="hero-description">
-                        Passionate DevOps Engineer with 2+ years of hands-on experience in cloud infrastructure, 
-                        CI/CD automation, and containerization technologies. Specializing in building scalable, 
-                        secure, and efficient deployment pipelines for modern applications.
+                        Passionate DevOps &amp; Cloud Security Engineer with 2+ years of production experience in multi-cloud infrastructure, 
+                        automated GitOps CI/CD pipelines, container orchestration, and defensive security. Creator and infrastructure lead of CyberUpdates365.
                     </p>
                     <div class="hero-highlights">
                         <div class="highlight-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Expert in AWS, Docker, Kubernetes & Terraform</span>
+                            <span>Production Multi-Cloud: AWS, GCP, Docker, Kubernetes &amp; Terraform</span>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Automated CI/CD pipelines with GitHub Actions</span>
+                            <span>Automated GitOps CI/CD pipelines with GitHub Actions &amp; ArgoCD</span>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-shield-alt"></i>
-                            <span>DevOps & Infrastructure Lead at <a href="https://cyberupdates365.com" target="_blank" rel="noopener" style="color: #60a5fa; font-weight: 600; text-decoration: underline;">CyberUpdates365</a></span>
+                            <span>DevOps &amp; Infrastructure Lead at <a href="https://cyberupdates365.com" target="_blank" rel="noopener" style="color: #60a5fa; font-weight: 600; text-decoration: underline;">CyberUpdates365</a></span>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Available for freelance DevOps projects</span>
+                            <span>Available for freelance DevOps &amp; DevSecOps projects</span>
                         </div>
                     </div>
                     <div class="hero-buttons">
@@ -305,16 +309,21 @@
                         <div class="card-glow"></div>
                         <div class="profile-avatar">
                             <div class="avatar-bg">
-                                <img src="images/profile-pic.png" alt="Uday Patil - DevOps Engineer" class="profile-image">
+                                <img src="images/profile-pic.png" alt="Uday Patil - DevOps & Cybersecurity Engineer" class="profile-image">
                             </div>
                             <div class="status-indicator">
                                 <span class="status-dot"></span>
-                                <span>Available for Projects</span>
+                                <span>Security Cleared &bull; Available</span>
                             </div>
                         </div>
                         <div class="profile-info">
                             <h3>Uday Patil</h3>
-                            <p>DevOps Engineer</p>
+                            <p class="profile-role">DevOps &amp; Cloud Security Specialist</p>
+                            <div class="profile-chips">
+                                <span class="profile-chip"><i class="fab fa-aws"></i> AWS / GCP</span>
+                                <span class="profile-chip"><i class="fas fa-shield-alt"></i> DevSecOps</span>
+                                <span class="profile-chip"><i class="fas fa-cubes"></i> ArgoCD GitOps</span>
+                            </div>
                             <div class="profile-links">
                                 <a href="mailto:udaypatildevops@gmail.com" class="profile-link" title="Email">
                                     <i class="fas fa-envelope"></i>
@@ -326,6 +335,26 @@
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Live DevOps Terminal Console -->
+                    <div class="devops-terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="term-dot term-red"></span>
+                                <span class="term-dot term-yellow"></span>
+                                <span class="term-dot term-green"></span>
+                            </div>
+                            <span class="terminal-title">uday@cloud-bastion:~ (zsh)</span>
+                            <span class="terminal-status"><i class="fas fa-shield-alt"></i> TLS 1.3 SECURE</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="term-line"><span class="term-prompt">❯</span> <span class="term-cmd">k8s-cluster --health-check</span></div>
+                            <div class="term-output text-success">✔ GKE &amp; EKS Clusters: Healthy [HPA Active]</div>
+                            <div class="term-line"><span class="term-prompt">❯</span> <span class="term-cmd">sec-scan --target cyberupdates365.com</span></div>
+                            <div class="term-output text-cyan">✔ Cloudflare WAF: Armed | SSL/TLS: 1.3 | 0 CVEs</div>
+                            <div class="term-line"><span class="term-prompt">❯</span> <span class="term-cmd">gitops-sync --env prod</span> <span class="term-tag-synced">SYNCED</span></div>
                         </div>
                     </div>
                 </div>
@@ -355,77 +384,110 @@
                         <span class="logo-text">AWS</span>
                     </div>
                     <div class="logo-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud Platform" class="tech-logo">
+                        <span class="logo-text">Google Cloud</span>
+                    </div>
+                    <div class="logo-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker Containerization Tool" class="tech-logo">
                         <span class="logo-text">Docker</span>
                     </div>
                     <div class="logo-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg" alt="Kubernetes Orchestration Tool" class="tech-logo">
-                        <span class="logo-text">k8s</span>
-                    </div>
-                    <div class="logo-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins CI/CD Tool" class="tech-logo">
-                        <span class="logo-text">Jenkins</span>
+                        <span class="logo-text">Kubernetes</span>
                     </div>
                     <div class="logo-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform Infrastructure Tool" class="tech-logo">
                         <span class="logo-text">Terraform</span>
                     </div>
                     <div class="logo-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Version Control Tool" class="tech-logo">
-                        <span class="logo-text">GitHub</span>
+                        <div class="tech-logo-icon" style="color: #f38020;">
+                            <i class="fab fa-cloudflare"></i>
+                        </div>
+                        <span class="logo-text">Cloudflare WAF</span>
+                    </div>
+                    <div class="logo-item">
+                        <div class="tech-logo-icon" style="color: #ef7b4d;">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <span class="logo-text">ArgoCD</span>
                     </div>
                     <div class="logo-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="GitHub Actions CI/CD Tool" class="tech-logo">
                         <span class="logo-text">GitHub Actions</span>
                     </div>
                     <div class="logo-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins CI/CD Tool" class="tech-logo">
+                        <span class="logo-text">Jenkins</span>
+                    </div>
+                    <div class="logo-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux Operating System" class="tech-logo">
                         <span class="logo-text">Linux</span>
                     </div>
                     <div class="logo-item">
-                        <div class="tech-logo-icon">
-                            <i class="fas fa-code-branch"></i>
+                        <div class="tech-logo-icon" style="color: #10b981;">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                        <span class="logo-text">CI/CD</span>
+                        <span class="logo-text">DevSecOps</span>
                     </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Automation" class="tech-logo">
+                        <span class="logo-text">Python</span>
+                    </div>
+
                     <!-- Duplicate logos for seamless loop -->
                     <div class="logo-item">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS DevOps Tool" class="tech-logo">
                         <span class="logo-text">AWS</span>
                     </div>
                     <div class="logo-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud Platform" class="tech-logo">
+                        <span class="logo-text">Google Cloud</span>
+                    </div>
+                    <div class="logo-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker Containerization Tool" class="tech-logo">
                         <span class="logo-text">Docker</span>
                     </div>
                     <div class="logo-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg" alt="Kubernetes Orchestration Tool" class="tech-logo">
-                        <span class="logo-text">k8s</span>
-                    </div>
-                    <div class="logo-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins CI/CD Tool" class="tech-logo">
-                        <span class="logo-text">Jenkins</span>
+                        <span class="logo-text">Kubernetes</span>
                     </div>
                     <div class="logo-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform Infrastructure Tool" class="tech-logo">
                         <span class="logo-text">Terraform</span>
                     </div>
                     <div class="logo-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Version Control Tool" class="tech-logo">
-                        <span class="logo-text">GitHub</span>
+                        <div class="tech-logo-icon" style="color: #f38020;">
+                            <i class="fab fa-cloudflare"></i>
+                        </div>
+                        <span class="logo-text">Cloudflare WAF</span>
+                    </div>
+                    <div class="logo-item">
+                        <div class="tech-logo-icon" style="color: #ef7b4d;">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <span class="logo-text">ArgoCD</span>
                     </div>
                     <div class="logo-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="GitHub Actions CI/CD Tool" class="tech-logo">
                         <span class="logo-text">GitHub Actions</span>
                     </div>
                     <div class="logo-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins CI/CD Tool" class="tech-logo">
+                        <span class="logo-text">Jenkins</span>
+                    </div>
+                    <div class="logo-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux Operating System" class="tech-logo">
                         <span class="logo-text">Linux</span>
                     </div>
                     <div class="logo-item">
-                        <div class="tech-logo-icon">
-                            <i class="fas fa-code-branch"></i>
+                        <div class="tech-logo-icon" style="color: #10b981;">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                        <span class="logo-text">CI/CD</span>
+                        <span class="logo-text">DevSecOps</span>
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Automation" class="tech-logo">
+                        <span class="logo-text">Python</span>
                     </div>
                 </div>
             </div>
@@ -542,6 +604,95 @@
                                 <h5>GitHub Actions</h5>
                                 <span>CI/CD Automation</span>
                             </div>
+                        </div>
+                    </div>
+            <!-- DevSecOps Engineering Pillars Matrix -->
+            <div class="devsecops-pillars-section">
+                <div class="section-header" style="margin-top: 5rem; margin-bottom: 2.5rem;">
+                    <div class="cyber-status-pill" style="margin: 0 auto 1.2rem auto;">
+                        <span class="status-pulse-dot"></span>
+                        <span class="status-pill-text">SECURITY &bull; AUTOMATION &bull; RESILIENCE</span>
+                    </div>
+                    <h3 class="section-title" style="font-size: 2.4rem;">Core DevSecOps Engineering Pillars</h3>
+                    <p class="section-subtitle">How I design, harden, and scale resilient cloud infrastructures</p>
+                </div>
+                
+                <div class="pillars-grid">
+                    <!-- Pillar 1 -->
+                    <div class="pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon-box" style="background: rgba(59, 130, 246, 0.12); color: #3b82f6;">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <span class="pillar-step">01</span>
+                        </div>
+                        <h4 class="pillar-title">Multi-Cloud &amp; Declarative IaC</h4>
+                        <p class="pillar-desc">
+                            Architecting resilient multi-region environments across AWS &amp; GCP using modular Terraform. Automated VPC isolation, security groups, RDS multi-AZ, and immutable infrastructure.
+                        </p>
+                        <div class="pillar-tags">
+                            <span class="pillar-tag">AWS EC2 / S3 / VPC</span>
+                            <span class="pillar-tag">GCP GKE</span>
+                            <span class="pillar-tag">Terraform IaC</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon-box" style="background: rgba(139, 92, 246, 0.12); color: #8b5cf6;">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <span class="pillar-step">02</span>
+                        </div>
+                        <h4 class="pillar-title">GitOps &amp; Zero-Downtime CI/CD</h4>
+                        <p class="pillar-desc">
+                            Designing automated build-test-scan-deploy pipelines via GitHub Actions and ArgoCD. Continuous cluster synchronization on Kubernetes with declarative manifests and automated rollbacks.
+                        </p>
+                        <div class="pillar-tags">
+                            <span class="pillar-tag">GitHub Actions</span>
+                            <span class="pillar-tag">ArgoCD</span>
+                            <span class="pillar-tag">Docker Multi-stage</span>
+                            <span class="pillar-tag">Helm Charts</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon-box" style="background: rgba(16, 185, 129, 0.12); color: #10b981;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <span class="pillar-step">03</span>
+                        </div>
+                        <h4 class="pillar-title">Cybersecurity, WAF &amp; Hardening</h4>
+                        <p class="pillar-desc">
+                            Defensive security posture with Cloudflare WAF, custom rate-limiting, SSL/TLS 1.3 offloading, IAM least privilege access controls, and network vulnerability auditing via Zenmap.
+                        </p>
+                        <div class="pillar-tags">
+                            <span class="pillar-tag">Cloudflare WAF</span>
+                            <span class="pillar-tag">Zenmap Scanning</span>
+                            <span class="pillar-tag">IAM Least Privilege</span>
+                            <span class="pillar-tag">ISRO Certified</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon-box" style="background: rgba(6, 182, 212, 0.12); color: #06b6d4;">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <span class="pillar-step">04</span>
+                        </div>
+                        <h4 class="pillar-title">Agentic AI &amp; Autonomous Ops</h4>
+                        <p class="pillar-desc">
+                            Implementing next-generation AI Ops with local RAG architectures (Llama 3.2), Anthropic Claude Code subagents, and custom MCP servers to automate runbooks, logs diagnosis, and alerts.
+                        </p>
+                        <div class="pillar-tags">
+                            <span class="pillar-tag">Local RAG Llama 3.2</span>
+                            <span class="pillar-tag">Claude Code Subagents</span>
+                            <span class="pillar-tag">MCP Servers</span>
                         </div>
                     </div>
                 </div>
@@ -761,13 +912,14 @@
                         <div class="project-icon">
                             <i class="fas fa-ship"></i>
                         </div>
+                        <span class="project-badge badge-gitops"><i class="fas fa-sync-alt"></i> GITOPS &bull; GKE K8S</span>
                         <div class="project-links">
                             <a href="#" class="project-link" title="View Code">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
                     </div>
-                    <h3 class="project-title">WorkTrack Pro – GitOps CI/CD & Kubernetes Orchestration</h3>
+                    <h3 class="project-title">WorkTrack Pro – GitOps CI/CD &amp; Kubernetes Orchestration</h3>
                     <p class="project-description">
                         Architected and deployed a production-grade microservices application (React, Node.js, PostgreSQL) on Google Kubernetes Engine (GKE).
                         Engineered an automated GitOps CI/CD pipeline using GitHub Actions for Docker builds and ArgoCD for continuous cluster synchronization.
@@ -785,13 +937,14 @@
                         <div class="project-icon">
                             <i class="fas fa-robot"></i>
                         </div>
+                        <span class="project-badge badge-ai"><i class="fas fa-robot"></i> AGENTIC AI &bull; LLAMA 3.2</span>
                         <div class="project-links">
                             <a href="#" class="project-link" title="View Code">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
                     </div>
-                    <h3 class="project-title">Mark42 DevOps Assistant – Agentic AI & RAG Implementation</h3>
+                    <h3 class="project-title">Mark42 DevOps Assistant – Agentic AI &amp; RAG Implementation</h3>
                     <p class="project-description">
                         Developed a private, AI-powered DevOps assistant utilizing Llama 3.2 and Local RAG architecture to securely query technical documentation.
                         Integrated Agentic AI capabilities to streamline routine operations, automate troubleshooting, and enhance productivity.
@@ -808,20 +961,21 @@
                         <div class="project-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
+                        <span class="project-badge badge-cyber"><i class="fas fa-shield-alt"></i> PRODUCTION LIVE &bull; WAF ARMED</span>
                         <div class="project-links">
                             <a href="https://cyberupdates365.com" class="project-link" target="_blank" rel="noopener" title="Visit CyberUpdates365 Live">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
                     </div>
-                    <h3 class="project-title">CyberUpdates365 – Web Infrastructure, Cloudflare & SEO</h3>
+                    <h3 class="project-title">CyberUpdates365 – Web Infrastructure, Cloudflare &amp; SEO</h3>
                     <p class="project-description">
                         Architected, deployed, and manage <a href="https://cyberupdates365.com" target="_blank" rel="noopener" style="color: #3b82f6; font-weight: 600; text-decoration: underline;">CyberUpdates365.com</a>, a high-traffic global cyber intelligence and threat advisory platform. Implemented end-to-end Cloudflare DNS routing, SSL provisioning, WAF firewall protection, automated CI/CD deployment pipelines, and technical SEO architecture driving domain authority and search visibility.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">CyberUpdates365</span>
                         <span class="tech-tag">Cloudflare WAF</span>
-                        <span class="tech-tag">DNS & SSL</span>
+                        <span class="tech-tag">DNS &amp; SSL</span>
                         <span class="tech-tag">SEO Architecture</span>
                     </div>
                 </div>
@@ -831,6 +985,7 @@
                         <div class="project-icon">
                             <i class="fab fa-aws"></i>
                         </div>
+                        <span class="project-badge badge-cloud"><i class="fab fa-aws"></i> IAC &bull; MULTI-TIER VPC</span>
                         <div class="project-links">
                             <a href="#" class="project-link" title="View Code">
                                 <i class="fab fa-github"></i>

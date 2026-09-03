@@ -37,19 +37,24 @@ body.light-theme {
 
 /* Dark Theme Variables */
 body.dark-theme {
-    --bg-primary: #020617;
-    --bg-secondary: #0f172a;
-    --bg-tertiary: #1e293b;
+    --bg-primary: #030712;
+    --bg-secondary: #0b1329;
+    --bg-tertiary: #0f1c3f;
     --text-primary: #f8fafc;
     --text-secondary: #cbd5e1;
     --text-muted: #94a3b8;
-    --border-color: rgba(59, 130, 246, 0.2);
+    --border-color: rgba(59, 130, 246, 0.22);
     --accent-primary: #3b82f6;
     --accent-secondary: #8b5cf6;
-    --accent-tertiary: #ec4899;
-    --card-bg: rgba(15, 23, 42, 0.7);
-    --card-border: rgba(255, 255, 255, 0.05);
-    --shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    --accent-tertiary: #06b6d4;
+    --accent-cyber: #10b981;
+    --card-bg: rgba(11, 19, 43, 0.8);
+    --card-border: rgba(59, 130, 246, 0.18);
+    --shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    background-image: 
+        radial-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, #030712 0%, #060d24 50%, #030712 100%);
+    background-size: 36px 36px, 100% 100%;
 }
 
 /* Apply theme variables */
@@ -661,6 +666,329 @@ body {
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Cyber Status Pill */
+.cyber-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    width: fit-content;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.12);
+}
+
+.status-pulse-dot {
+    width: 9px;
+    height: 9px;
+    background: #10b981;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 0 10px #10b981;
+    animation: status-pulse 2s infinite ease-in-out;
+}
+
+@keyframes status-pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.35);
+        opacity: 0.5;
+    }
+}
+
+.status-pill-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #10b981;
+    letter-spacing: 0.5px;
+}
+
+.terminal-prefix {
+    color: #10b981;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+}
+
+.profile-role {
+    font-size: 1.05rem;
+    color: var(--accent-primary) !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.8rem !important;
+    padding-left: 0.5rem;
+}
+
+.profile-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+.profile-chip {
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--text-secondary);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+/* Live DevOps Terminal Console */
+.devops-terminal {
+    background: rgba(3, 7, 18, 0.92);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(59, 130, 246, 0.28);
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65), 0 0 25px rgba(59, 130, 246, 0.12);
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    overflow: hidden;
+    margin-top: 1.5rem;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.devops-terminal:hover {
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 35px rgba(59, 130, 246, 0.22);
+    transform: translateY(-4px);
+}
+
+.terminal-header {
+    background: rgba(15, 23, 42, 0.95);
+    padding: 0.7rem 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.term-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.term-red { background: #ef4444; }
+.term-yellow { background: #f59e0b; }
+.term-green { background: #10b981; }
+
+.terminal-title {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.terminal-status {
+    font-size: 0.72rem;
+    color: #10b981;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.terminal-body {
+    padding: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.term-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.term-prompt {
+    color: #3b82f6;
+    font-weight: 700;
+}
+
+.term-cmd {
+    color: #f8fafc;
+    font-weight: 600;
+}
+
+.term-output {
+    color: #94a3b8;
+    padding-left: 0.8rem;
+}
+
+.text-success {
+    color: #10b981 !important;
+}
+
+.text-cyan {
+    color: #06b6d4 !important;
+}
+
+.term-tag-synced {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    padding: 0.1rem 0.45rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+/* DevSecOps Engineering Pillars Matrix */
+.devsecops-pillars-section {
+    margin-top: 5rem;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
+    margin-top: 2rem;
+}
+
+.pillar-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(25px);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.pillar-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-primary);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+}
+
+.pillar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pillar-icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.pillar-step {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.pillar-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.35;
+}
+
+.pillar-desc {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    flex: 1;
+}
+
+.pillar-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.pillar-tag {
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    background: rgba(59, 130, 246, 0.08);
+    color: var(--accent-primary);
+    border: 1px solid rgba(59, 130, 246, 0.18);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Project Cards Live Badges */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.project-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.badge-cyber {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.15);
+}
+
+.badge-gitops {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.badge-ai {
+    background: rgba(139, 92, 246, 0.15);
+    color: #a78bfa;
+    border: 1px solid rgba(139, 92, 246, 0.35);
+}
+
+.badge-cloud {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.35);
 }
 
 /* Section Styles */

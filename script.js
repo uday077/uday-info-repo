@@ -94,11 +94,11 @@ function initTypingAnimation() {
     const typingElement = document.querySelector('.typing-text');
     if (typingElement) {
         const texts = [
-            'DevOps Engineer', 
-            'Cloud Infrastructure Specialist', 
-            'CI/CD Automation Expert',
-            'AWS Certified Solutions Architect',
-            'Kubernetes & Docker Pro'
+            'DevOps & DevSecOps Engineer', 
+            'Cybersecurity & WAF Specialist', 
+            'Cloud Architect (AWS & GCP)', 
+            'Kubernetes & GitOps Expert (ArgoCD)',
+            'Agentic AI & Operations Engineer'
         ];
         let textIndex = 0;
         let charIndex = 0;
