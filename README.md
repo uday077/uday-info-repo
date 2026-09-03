@@ -167,6 +167,7 @@ Add your projects in the Projects section with:
 
 Check out my other DevOps and AWS projects:
 
+- **[CyberUpdates365](https://cyberupdates365.com)** - Global Cybersecurity Intelligence & Threat Advisory Platform (DevOps, Cloudflare & AWS)
 - **[Node.js Project on AWS EC2](https://github.com/uday077/nodejs-project-on-aws-ec2-)** - CI/CD pipeline with CodePipeline
 - **[Lovely Backend Project](https://github.com/uday077/lovely-backend-project-)** - TypeScript backend development
 - **[AWS Static Website Hosting](https://github.com/uday077/AWS---Static-website-hosting-using-AWS-S3-and-service-)** - S3 and CloudFront setup
