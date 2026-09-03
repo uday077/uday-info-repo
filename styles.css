@@ -306,11 +306,14 @@ body {
 
 .hero-image {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
-    height: 100%;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    gap: 1.5rem;
     padding: 1rem 0;
-    margin-top: 2rem;
 }
 
 .greeting {
@@ -609,31 +612,31 @@ body {
 .profile-info {
     position: relative;
     z-index: 10;
-    text-align: left;
+    text-align: center;
+    width: 100%;
 }
 
 .profile-info h3 {
-    font-size: 2.8rem;
-    margin-bottom: 0.2rem;
+    font-size: 2.3rem;
+    margin-bottom: 0.3rem;
     color: var(--text-primary);
     font-weight: 900;
-    line-height: 1.1;
-    text-align: left;
+    line-height: 1.2;
+    text-align: center;
     letter-spacing: -0.01em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-left: 0.5rem;
+    white-space: normal;
+    overflow: visible;
+    padding: 0;
 }
 
 .profile-info p {
     color: var(--text-muted);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     margin-top: 0.1rem;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 500;
-    text-align: left;
-    padding-left: 0.5rem;
+    text-align: center;
+    padding: 0;
 }
 
 .profile-links {
@@ -723,7 +726,8 @@ body {
     color: var(--accent-primary) !important;
     font-weight: 600 !important;
     margin-bottom: 0.8rem !important;
-    padding-left: 0.5rem;
+    text-align: center !important;
+    padding: 0 !important;
 }
 
 .profile-chips {
@@ -731,7 +735,8 @@ body {
     flex-wrap: wrap;
     gap: 0.4rem;
     margin-bottom: 1.5rem;
-    padding-left: 0.5rem;
+    justify-content: center;
+    padding: 0;
 }
 
 .profile-chip {
@@ -942,6 +947,443 @@ body {
     padding: 0.2rem 0.6rem;
     border-radius: 6px;
     font-weight: 600;
+}
+
+/* ===================================================
+   DevSecOps Continuous Loop & Security Radar Section
+   =================================================== */
+.devsecops-loop-section {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(3, 7, 18, 0.6) 0%, rgba(11, 19, 43, 0.4) 50%, rgba(3, 7, 18, 0.8) 100%);
+    border-top: 1px solid rgba(59, 130, 246, 0.12);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.12);
+}
+
+.loop-showcase-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 2.5rem;
+    align-items: stretch;
+}
+
+/* Common Card Header */
+.infinity-loop-card, .security-radar-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(25px);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 2.2rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.infinity-loop-card:hover, .security-radar-card:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(59, 130, 246, 0.12);
+}
+
+.card-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.card-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.pulse-indicator {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #3b82f6;
+    box-shadow: 0 0 10px #3b82f6;
+    animation: status-pulse 2s infinite ease-in-out;
+}
+
+.pulse-indicator-emerald {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 10px #10b981;
+    animation: status-pulse 2s infinite ease-in-out;
+}
+
+.indicator-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.loop-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #3b82f6;
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+}
+
+.radar-status-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+}
+
+/* Infinity Diagram Area */
+.infinity-diagram-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.infinity-svg {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    overflow: visible;
+}
+
+.infinity-track {
+    stroke: rgba(255, 255, 255, 0.08);
+    stroke-width: 16;
+    stroke-linecap: round;
+}
+
+.infinity-beam {
+    stroke: url(#loopGradient);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 200 800;
+    animation: infinity-beam-flow 6s linear infinite;
+}
+
+@keyframes infinity-beam-flow {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Infinity Loop Nodes */
+.loop-node {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+
+.node-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1.5px solid rgba(59, 130, 246, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #60a5fa;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.loop-node:hover .node-icon {
+    transform: scale(1.2);
+    border-color: #3b82f6;
+    background: #3b82f6;
+    color: white;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+}
+
+.node-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+/* Center Security Node in Infinity Loop */
+.node-security {
+    z-index: 10;
+}
+
+.security-core-pulse {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, transparent 70%);
+    animation: status-pulse 2s infinite ease-in-out;
+    top: -12px;
+}
+
+.security-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #10b981, #06b6d4) !important;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    color: white !important;
+    font-size: 1.2rem !important;
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.5) !important;
+}
+
+.security-label {
+    color: #10b981 !important;
+    font-weight: 800 !important;
+    font-size: 0.75rem !important;
+}
+
+.loop-footer-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.loop-footer-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary);
+    padding: 0.3rem 0.75rem;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.loop-footer-pill i {
+    color: var(--accent-primary);
+}
+
+/* ===================================================
+   Continuous Security Threat Defense Radar
+   =================================================== */
+.radar-scope-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 1rem auto;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, rgba(3, 7, 18, 0.95) 70%);
+    border: 2px solid rgba(16, 185, 129, 0.3);
+    box-shadow: 0 0 35px rgba(16, 185, 129, 0.15), inset 0 0 35px rgba(16, 185, 129, 0.08);
+    overflow: hidden;
+}
+
+.radar-rings {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.radar-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px dashed rgba(16, 185, 129, 0.2);
+}
+
+.ring-1 { width: 33%; height: 33%; }
+.ring-2 { width: 66%; height: 66%; }
+.ring-3 { width: 99%; height: 99%; }
+
+.radar-crosshair-h {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(16, 185, 129, 0.2);
+}
+
+.radar-crosshair-v {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: rgba(16, 185, 129, 0.2);
+}
+
+/* Continuous 360-degree sweep line */
+.radar-sweep {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, transparent 0deg, transparent 270deg, rgba(16, 185, 129, 0.35) 360deg);
+    animation: radar-sweep-rotate 4s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes radar-sweep-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.radar-center-shield {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.shield-pulse-ring {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -5px;
+    left: -5px;
+    border-radius: 50%;
+    border: 1.5px solid #10b981;
+    animation: status-pulse 2s infinite ease-in-out;
+}
+
+.shield-icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(15, 23, 42, 0.95);
+    border: 2px solid #10b981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #10b981;
+    font-size: 1.1rem;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+
+/* Radar Threat Blips */
+.radar-blip {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    z-index: 8;
+    animation: blip-fade 3s infinite ease-in-out;
+}
+
+.blip-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ef4444;
+    box-shadow: 0 0 8px #ef4444;
+}
+
+.blip-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: #fca5a5;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    white-space: nowrap;
+}
+
+.blip-1 { top: 28%; left: 16%; animation-delay: 0.5s; }
+.blip-2 { top: 68%; left: 62%; animation-delay: 1.8s; }
+.blip-3 .blip-dot { background: #10b981; box-shadow: 0 0 8px #10b981; }
+.blip-3 .blip-tag { color: #6ee7b7; border-color: rgba(16, 185, 129, 0.3); }
+.blip-3 { top: 32%; left: 68%; animation-delay: 2.8s; }
+
+@keyframes blip-fade {
+    0%, 100% { opacity: 0.2; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Radar Metrics List */
+.radar-metrics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 1.5rem;
+}
+
+.radar-metric-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.65rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+}
+
+.metric-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.metric-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.metric-dot.green {
+    background: #10b981;
+    box-shadow: 0 0 6px #10b981;
+}
+
+.metric-name {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.metric-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: #10b981;
+    font-weight: 700;
+}
+
+@media (max-width: 968px) {
+    .loop-showcase-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Project Cards Live Badges */
